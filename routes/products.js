@@ -1,8 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-//  (only 1 item from Features array showing)
-
 const productsController = require('../controllers/products');
 
 const auth = require('../middleware/auth')

@@ -17,10 +17,10 @@ router.get('/', providersController.getAllProviders);
 router.get('/:id', providersController.getProviderById)
 
 // POST to Endpoint
-router.post('/', providersController.postProvider)
+router.post('/', auth, providersController.postProvider)
 
 // PUT Endpoint
-router.put('/:id', providersController.putProviderById)
+router.put('/:id', auth, providersController.putProviderById)
 
 // DELETE Endpoint
 router.delete('/:id', auth, providersController.deleteProviderById);
