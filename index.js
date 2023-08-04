@@ -46,7 +46,7 @@ async function connect() {
   connect();
 
 // Log what Mode we're in, and run certain pieces of middleware in said mode
-// Change to Production: $env:NODE_ENV=production
+// Change to Production: $env:NODE_ENV="production"
 // Change to Development: $env:NODE_ENV=development
 console.log(app.get('env'))
 if (app.get('env') === 'development') {
