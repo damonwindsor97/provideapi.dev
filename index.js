@@ -73,5 +73,5 @@ app.use('/api/auth', auth);
 
 
 // Listen on the servers port, OR 3000
-const port = process.env.connectionString || serverPort;
+const port = process.env.PORT || serverPort;
 app.listen(port, ()=> console.log(`Listening on Port: ${port}...`))
