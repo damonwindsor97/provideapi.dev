@@ -1,5 +1,5 @@
 {
-    "name": "Provide API | By Swegnesium",
+    "name": "Provider API | By Swegnesium",
     "providersPrivateKey": "providersPassword",
     "port": "27017",
     "db": {

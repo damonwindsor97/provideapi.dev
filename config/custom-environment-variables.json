@@ -1,7 +1,7 @@
 {
     "providersPrivateKey": "providersPassword",
-    "port": "27017",
+    "port": "PORT",
     "db": {
-        "connectionString": "mongodb+srv://dbAdmin:ZrBsfFks4jmdUimp@providecluster.okqx5ku.mongodb.net/?retryWrites=true&w=majority"
+        "connectionString": "DB_CONNECTION_STRING"
     }
 }
