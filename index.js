@@ -20,8 +20,8 @@ const auth = require('./routes/auth')
 // Attach Express to our app
 const app = express()
 
-// const csp = require('./config/csp')
-// app.use(csp)
+const csp = require('./config/csp')
+app.use(csp)
 
 
 //Setup Config
@@ -66,7 +66,7 @@ app.use(middlewareLogger)
 
 
 app.use((req, res, next) => {
-  res.setHeader('Content-Security-Policy',"default-src 'self' frame-src 'self" );
+  res.setHeader('Content-Security-Policy'," frame-src 'self" );
   next();
 });
 
