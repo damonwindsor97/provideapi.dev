@@ -21,6 +21,7 @@ const auth = require('./routes/auth')
 const app = express()
 
 
+
 //Setup Config
 process.env["NODE_CONFIG_DIR"] = __dirname + "/config/"; //Stores the location of the config in a ENV VAR
 const config = require('config')
@@ -49,15 +50,16 @@ async function connect() {
 // Change to Development: $env:NODE_ENV=development
 console.log(app.get('env'))
 if (app.get('env') === 'development') {
-    app.use(morgan('tiny'))
 }
 
+app.use(morgan('tiny'))
 app.use(express.json()); //Parse incoming JSON data, available under the req.body
 // URLencoded allows us to pull querys from address bar
 app.use(express.urlencoded({ extended: true }))
 app.use(helmet())
 // creates endpoints for everything within the 'public' folder
 app.use(express.static('public'))
+app.use(express.static(__dirname + '/public'));
 app.use(middlewareLogger)
 
 
