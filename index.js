@@ -20,8 +20,8 @@ const auth = require('./routes/auth')
 // Attach Express to our app
 const app = express()
 
-const csp = require('./config/csp')
-app.use(csp)
+const CSP = require('./config/csp')
+app.use(CSP)
 
 
 //Setup Config
