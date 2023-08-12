@@ -58,7 +58,26 @@ app.use(morgan('tiny'))
 app.use(express.json()); //Parse incoming JSON data, available under the req.body
 // URLencoded allows us to pull querys from address bar
 app.use(express.urlencoded({ extended: true }))
-app.use(helmet())
+// Content-Security-Policy header.
+// app.use(
+//   helmet({
+//     contentSecurityPolicy: {
+//       directives: {
+//         "script-src": ["'self'", "youtube.com"],
+//       },
+//     },
+//   })
+// );
+
+// This disables the Content-Security-Policy
+// and X-Download-Options headers.
+app.use(
+  helmet({
+    contentSecurityPolicy: false
+  })
+);
+
+
 // creates endpoints for everything within the 'public' folder
 app.use(express.static('public'))
 app.use(express.static(__dirname + '/public'));
