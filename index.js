@@ -59,23 +59,23 @@ app.use(express.json()); //Parse incoming JSON data, available under the req.bod
 // URLencoded allows us to pull querys from address bar
 app.use(express.urlencoded({ extended: true }))
 // Content-Security-Policy header.
-// app.use(
-//   helmet({
-//     contentSecurityPolicy: {
-//       directives: {
-//         "script-src": ["'self'", "youtube.com"],
-//       },
-//     },
-//   })
-// );
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        "script-src": ["'self'", "youtube.com"],
+      },
+    },
+  })
+);
 
 // This disables the Content-Security-Policy
 // and X-Download-Options headers.
-app.use(
-  helmet({
-    contentSecurityPolicy: false
-  })
-);
+// app.use(
+//   helmet({
+//     contentSecurityPolicy: false
+//   })
+// );
 
 
 // creates endpoints for everything within the 'public' folder
