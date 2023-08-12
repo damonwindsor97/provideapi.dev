@@ -65,15 +65,13 @@ app.use(express.static(__dirname + '/public'));
 app.use(middlewareLogger)
 
 
-app.use((req, res, next) => {
-  res.setHeader('Content-Security-Policy'," frame-src 'self" );
-  next();
-});
 
 // Main addresses
 app.use('/', home);
 app.use('/api/providers', providers);
+app.use('/api/providers/id:', providers);
 app.use('/api/products', products);
+app.use('/api/products/id:', products);
 app.use('/api/spoofers', spoofers);
 app.use('/api/users', users);
 app.use('/api/auth', auth);
