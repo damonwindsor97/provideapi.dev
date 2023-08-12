@@ -9,9 +9,15 @@ const corsOptions = {
 
 
 // Create initial homepage (will be website homepage eventually)
-router.get('/', cors(corsOptions), function(req, res) {
+router.get('/', function(req, res) {
     res.sendFile(__dirname + "/index.html");
     // res.send('Welcome to Provide')
 });
+
+// router.get('/',function(req,res){
+//     res.sendFile(path.join(__dirname+'/index.html'));
+//     //__dirname : It will resolve to your project folder.
+//   });
+   
 
 module.exports = router
