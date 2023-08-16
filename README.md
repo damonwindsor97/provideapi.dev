@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+<p align="center">
+    An API to help users gather information on the best, worst or most appropriate cheat for the game they play.
+    <br />
+    <a><strong>Explore the docs » *coming soon*...</strong></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+</p>
+  
+  <div align="center">
+    <h2>About The Project<h2/>
+  </div>
+This API has mainly been built as a passion project for myself and my friends to use; it holds data on Game Enhancer Providers and their correlating Products. Giving a good description and/or chuck of info so they know who to choose next!
+      <br />
+       <br />
+ <h3>What is Provide API?</h3>
+       <br />
+Provide API that provides their users with common and known providers of game enhancers.
+Will feature a few; Providers, Developers & their products. In the future I may expand to Spoofers, things to expect;
+      <ul>
+          <li>Products Available</li>
+      </ul>
+      <ul>Features
+          <li>Aimbot</li>
+          <li>ESP / Visuals</li>
+          <li>MISC</li>
+      </ul>
+      <ul>
+          <li>isUpdated</li>
+          <li>isDetected</li>
+          <li></li>
+      </ul>
+      <p>And much, much more ready and in the works</p>
 
-## Available Scripts
+  <div align="center">
+    <h2>Why should people choose Provide?<h2/>
+  </div>
+<p>Here at Provide we heavily use Third-Party Applications to improve our gameplay, you can trust myself and the communities I have around me to secure your next best cheat.</p>
+<p>The data I enter is not falsified, but Developers ARE very weird about detection histories but I have eyes and ears in many servers - with that being said I am always happy to be receiving more info so I can keep status' on track!</p>
 
-In the project directory, you can run:
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Sometime down the line...
+* I will implement a very simple Front-End for those with Admin permissions to POST, PUT & DELETE data easily.
+* A Discord Bot to display data with
+* Connection to Respawn/EA API to auto detect updates
