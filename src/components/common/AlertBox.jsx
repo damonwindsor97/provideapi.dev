@@ -15,7 +15,7 @@ const AlertBox = () => {
         <p>swegnesium OR Swegnesium#0001</p>
         <hr />
             <div className="d-flex justify-content-end">
-            <Button onClick={() => setShow(false)} variant="outline-danger">
+            <Button onClick={() => setShow(false)} variant="outline-danger" size="sm">
                 X
             </Button>
             </div>
