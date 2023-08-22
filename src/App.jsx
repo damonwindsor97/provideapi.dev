@@ -16,7 +16,7 @@ function App() {
       <MyNavbar/>
         <Showcase/>
         <Container>
-          {/* <AlertBox/> */}
+          <AlertBox/>
           <Media/>
           <FeatureBoxes/> 
         </Container>
