@@ -26,7 +26,7 @@ Will feature a few; Providers, Developers & their products. In the future I may 
       <ul>
           <li>isUpdated</li>
           <li>isDetected</li>
-          <li></li>
+          <li>detectionHistory</li>
       </ul>
       <p>And much, much more ready and in the works</p>
 
@@ -40,4 +40,4 @@ Will feature a few; Providers, Developers & their products. In the future I may 
 ### Sometime down the line...
 * I will implement a very simple Front-End for those with Admin permissions to POST, PUT & DELETE data easily.
 * A Discord Bot to display data with
-* Connection to Respawn/EA API to auto detect updates
+* Connection to a game update API to auto-change some products "isUpdating" value

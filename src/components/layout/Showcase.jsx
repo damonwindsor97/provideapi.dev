@@ -1,34 +1,16 @@
-import Carousel from 'react-bootstrap/Carousel';
 
 
 const Showcase = () => {
   return (
-    <div>
-        <h1 className='p-3'>Provide</h1>
-        <p className='p-1'>A passion Project</p>
-        <Carousel>
-      <Carousel.Item>
-      <iframe className='w-100 rounded' height="500" src="https://www.youtube.com/embed/XNhJnSbG_Is" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <Carousel.Caption>
-        </Carousel.Caption>
-      </Carousel.Item>
+    <div className="myShowcase mb-5">
+      <img className="background-image" src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="gaming"/>
 
-      <Carousel.Item>
-      <iframe className='w-100 rounded' height="500" src="https://www.youtube.com/embed/cyq23QhrZns" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <Carousel.Caption>
+      <div className="overlay">
+        <h2 className="myShowcaseText">Provide</h2>
+        <p className='p-1 myShowcaseText'>A passion Project</p>
+      </div>
 
-        </Carousel.Caption>
-      </Carousel.Item>
 
-      <Carousel.Item>
-      <iframe className='w-100 rounded' height="500" src="https://www.youtube.com/embed/6JQevZuhE-4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <Carousel.Caption>
-          <p>
-
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
     </div>
   )
 }

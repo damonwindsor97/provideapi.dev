@@ -8,7 +8,7 @@ const FeatureBoxes = () => {
   return (
     <div>
         <Container>
-            <h3 className='p-3'>Keep up to date with your favourite Providers!</h3>
+            <h3 className='p-3 text-white'>Keep up to date with your favourite Providers!</h3>
             <Row>
                 <Col>
                     <Card className='mb-3' border="info" >
