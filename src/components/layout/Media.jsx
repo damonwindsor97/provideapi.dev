@@ -3,9 +3,9 @@ import Carousel from 'react-bootstrap/Carousel';
 
 const Media = () => {
   return (
-    <div>
+    <div className='m-5'>
 
-        <Carousel>
+      <Carousel>
       <Carousel.Item>
       <iframe className='w-100 rounded' height="500" src="https://www.youtube.com/embed/XNhJnSbG_Is" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <Carousel.Caption>
