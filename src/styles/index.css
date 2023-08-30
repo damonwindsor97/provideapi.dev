@@ -3,6 +3,7 @@
 
 .App {
   background-color: rgb(20, 20, 20);
+  color: #ffffff;
 }
 
 p {
@@ -69,4 +70,8 @@ h2 {
 .navLink:hover::before {
   transform-origin: left;
   transform: scaleX(1);
+}
+
+.aboutSection {
+  text-align: left;
 }
