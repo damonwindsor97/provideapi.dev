@@ -7,7 +7,10 @@ const ProductsAccordion= ({products }) => {
     {products.map((product, index) => (
         <Accordion defaultActiveKey={['0']} alwaysOpen data-bs-theme="dark">
         <Accordion.Item eventKey={index}>
-            <Accordion.Header>{product.productName}</Accordion.Header>
+            <Accordion.Header>
+            {product.isUpdated != true ? (<span>Safe: <span className="text-danger">{String(product.isUpdated)} </span> | </span>) : <span>Safe: <span className="text-success-emphasis">{String(product.isUpdated)}  </span> | </span>}
+                {product.productName}   
+            </Accordion.Header>
             <Accordion.Body>
                 Developer: {product.developer}
             </Accordion.Body>

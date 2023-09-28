@@ -39,7 +39,7 @@ function ProductsData() {
 
             <p className='m-1'>We are <span className='text-danger'>not sponsored or endorsed</span> by any of the providers that develop these products.</p>
         </div>
-        { isLoading && <div className='m-5'><BeatLoader color="#366cd6" size={30}/></div>}
+        { isLoading && <div className='m-5'><BeatLoader color="#366cd6" size={30}/> <br/> Loading may take up to 30 seconds...</div>}
         {products && <ProductsAccordion products={products}/>}
 
     </Container>

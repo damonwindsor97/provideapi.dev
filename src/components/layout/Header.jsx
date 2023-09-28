@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { Container } from "react-bootstrap"
+import { Container} from "react-bootstrap"
 
 // Icon Imports
 import { IoLogInOutline } from 'react-icons/io5';
@@ -7,14 +7,17 @@ import { LuHome } from 'react-icons/lu'
 import { AiOutlineDatabase } from 'react-icons/ai'
 import { SlDocs } from 'react-icons/sl'
 import { RiRobot2Fill } from 'react-icons/ri'
+import { AiOutlineAim } from "react-icons/ai";
+
 
 const Header = () => {
   return (
     <nav className="topNav">
         <Container>
-            <div className="logo">
-                
+             <div className="logo">
+                <AiOutlineAim  className="mb-2" style={{color: "aqua"}}/>{" "}
             </div>
+            
             <ul>
                 <li>
                     <Link to="/"><LuHome/></Link>
@@ -31,8 +34,7 @@ const Header = () => {
                 <li>
                     <Link className="disabled-link" to="/login">Login<IoLogInOutline/></Link>
                 </li>
-            </ul>
-
+            </ul> 
         </Container>
     </nav>
   )
