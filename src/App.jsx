@@ -1,31 +1,34 @@
-import { Container } from 'react-bootstrap';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom'
 
-// Custom Imports
-import MyNavbar from './components/layout/myNavbar.jsx';
-// import topNav from './components/layout/topNav.jsx';
-import Media from './components/layout/Media.jsx';
-import MyFooter from './components/layout/myFooter.jsx';
-import './styles/App.css';
-import FeatureBoxes from './components/common/FeatureBoxes.jsx';
-import AlertBox from './components/common/AlertBox.jsx';
-import Showcase from './components/layout/Showcase.jsx';
-import About from './components/common/About.jsx';
+// Page Imports
+import Home from './pages/Home'
+import LiveData from './pages/LiveData'
+import ProductsPage from './pages/dataPages/ProductsPage';
+import ProvidersPage from './pages/dataPages/ProvidersPage';
+import NotFound from './pages/NotFound';
 
+// Layout Components
+import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
 
 function App() {
   return (
     <div className="App">
-      {/* <topNav/> */}
-      <MyNavbar/>
-        <Showcase/>
-        <Container>
-          <AlertBox/>
-          <Media/>
-          <FeatureBoxes/> 
-          <About/>
-        </Container>
-      <MyFooter/>
-
+      <Router>
+        <Header/>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/data" element={<LiveData/>}/>
+          <Route path="/data/products" element={<ProductsPage/>}/>
+          <Route path="/data/providers" element={<ProvidersPage/>}/>
+          <Route path="*" element={<NotFound/>}/>
+        </Routes>
+        <Footer/>
+      </Router>
     </div>
   );
 }

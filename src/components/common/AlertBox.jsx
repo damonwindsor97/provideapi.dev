@@ -1,28 +1,15 @@
-import { useState } from 'react';
-import Alert from 'react-bootstrap/Alert';
-import Button from 'react-bootstrap/Button';
 
 const AlertBox = () => {
-    const [show, setShow] = useState(true);
+
 
   return (
-    <div>
-        <Alert show={show} variant="info" className='mt-3'>
-        <Alert.Heading>Are you a Cheat Developer?</Alert.Heading>
-        <p>
-            Please feel free to message me on Discord if you're interested in being featured in ProvideAPI - Details are; 
+  
+      <div className='alertBox'>
+        <p className='alertText p-2'>
+          Are you a Cheat Developer that wants to be featured? Message me on Discord! swegnesium OR Swegnesium#0001
         </p>
-        <p>swegnesium OR Swegnesium#0001</p>
-        <hr />
-            <div className="d-flex justify-content-end">
-            <Button onClick={() => setShow(false)} variant="outline-danger" size="sm">
-                X
-            </Button>
-            </div>
-      </Alert>
+      </div>
 
-      {/* {!show && <Button onClick={() => setShow(true)}>Show Alert</Button>} */}
-    </div>
   )
 }
 

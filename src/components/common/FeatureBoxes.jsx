@@ -7,11 +7,11 @@ import Col from 'react-bootstrap/Col';
 const FeatureBoxes = () => {
   return (
     <div>
-        <Container>
+        <Container className='content-align-center'>
             <h3 className='p-3 text-white'>Keep up to date with your favourite Providers!</h3>
             <Row>
                 <Col>
-                    <Card className='mb-5' border="info" >
+                    <Card className='mb-5' border="info"  xs={6} md={4}>
                         <Card.Body>
                         <Card.Title>Docs (later)</Card.Title>
                         <Card.Text>
@@ -25,7 +25,7 @@ const FeatureBoxes = () => {
                     </Card>
                 </Col>
                 <Col>
-                    <Card className='mb-3' border="info" >
+                    <Card className='mb-3' border="info"  xs={6} md={4}>
                         <Card.Body>
                         <Card.Title>Discord Bot (soon)</Card.Title>
                         <Card.Text>
