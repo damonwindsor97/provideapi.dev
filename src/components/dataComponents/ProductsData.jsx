@@ -6,7 +6,7 @@ import {useEffect, useState} from 'react';
 
 function ProductsData() {
     const [products, setProducts] = useState(null);
-    const [isLoading, setLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
             const headers = {}
@@ -16,7 +16,7 @@ function ProductsData() {
             })
             .then(data => {
                 setProducts(data)
-                setLoading(false)
+                setIsLoading(false)
             });
     }, []);
 
