@@ -22,7 +22,7 @@ const liveData = () => {
           <Button size='lg' variant='outline-info' className="m-4">Products</Button>
         </Link>
         <Link to='/data/providers'>
-          <Button size='lg' variant='outline-info' className="m-4">Providers</Button>
+          <Button disabled size='lg' variant='outline-info' className="m-4">Providers</Button>
         </Link>
         
 
