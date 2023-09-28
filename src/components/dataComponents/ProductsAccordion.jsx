@@ -4,9 +4,9 @@ const ProductsAccordion= ({products }) => {
 
     let updateStatus;
     if (products.isUpdated === true){
-        updateStatus = <p className="text-success-emphasis">{products.isUpdated}</p>
+        updateStatus = <p className="text-success-emphasis">{String(products.isUpdated)}</p>
     } else {
-        updateStatus = <p className="text-danger">{products.isUpdated}</p>
+        updateStatus = <p className="text-danger">{String(products.isUpdated)}</p>
     }
 
     return (
@@ -66,11 +66,11 @@ const ProductsAccordion= ({products }) => {
                     </Col>
                     <Col>
                         <h3>Is Updating:</h3>
-                        <p>{product.isUpdating}</p>
+                        <p>{String(product.isUpdating)}</p>
                     </Col>
                     <Col>
                         <h3>Is Updated:</h3>
-                            <p>{updateStatus}</p>
+                        <p>{updateStatus}</p>
                     </Col>
                 </Row>
             </Accordion.Body>
