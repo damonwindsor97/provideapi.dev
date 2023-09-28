@@ -1,21 +1,25 @@
 import {Container, } from 'react-bootstrap';
 import ProductsAccordion from './ProductsAccordion';
+import { BeatLoader } from 'react-spinners';
 
 import {useEffect, useState} from 'react';
 
 function ProductsData() {
     const [products, setProducts] = useState(null);
+    const [isLoading, setLoading] = useState(true);
 
     useEffect(() => {
-        const headers = {}
-        fetch('https://provide-api-ss5x.onrender.com/api/products', headers)
-        .then(res => {
-            return res.json();
-        })
-        .then(data => {
-            console.log(data)
-            setProducts(data)
-        })
+        setTimeout(() => {
+            const headers = {}
+            fetch('https://provide-api-ss5x.onrender.com/api/products', headers)
+            .then(res => {
+                return res.json();
+            })
+            .then(data => {
+                setProducts(data)
+                setLoading(false)
+            });
+        }, 100);
     }, []);
 
 
@@ -37,7 +41,7 @@ function ProductsData() {
 
             <p className='m-1'>We are <span className='text-danger'>not sponsored or endorsed</span> by any of the providers that develop these products.</p>
         </div>
-
+        { isLoading && <div><BeatLoader color="#366cd6" size={30}/></div>}
         {products && <ProductsAccordion products={products}/>}
 
     </Container>
