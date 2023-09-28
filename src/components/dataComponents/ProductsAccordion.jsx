@@ -2,7 +2,7 @@ import { Col, Row, Accordion } from "react-bootstrap";
 
 const ProductsAccordion= ({products }) => {
 
-    const arrayProductData = products.features.aimbot.map(aimbotFeature => <li>{aimbotFeature}</li>)
+    const arrayProductData = products.features.aimbot.map(aimbotFeature => <li key={products.id}>{aimbotFeature}</li>)
     return (
     <div className='m-4 mt-5'>
     {products.map((product) => (
