@@ -7,7 +7,7 @@ const ProductsAccordion= ({products }) => {
     <div className='m-4 mt-5'>
     {products.map((product) => (
         <Accordion defaultActiveKey={['0']} alwaysOpen data-bs-theme="dark">
-        <Accordion.Item eventKey="0">
+        <Accordion.Item eventKey={`0` + 1}>
             <Accordion.Header>{product.productName}</Accordion.Header>
             <Accordion.Body>
                 Developer: {product.developer}
@@ -18,8 +18,8 @@ const ProductsAccordion= ({products }) => {
                         <ul className="list-style-none">
                             <li>[+] Aimbot</li>
                             <ul className="list-style-none">
-                                {product.features.Aimbot.map((feature => (
-                                    <li key={product.id}>{feature}</li>
+                                {product.features.Aimbot.map((aimFeature => (
+                                    <li key={product.id}>{aimFeature}</li>
                                 )))}
                             </ul>
                         </ul>
@@ -28,7 +28,9 @@ const ProductsAccordion= ({products }) => {
                         <ul className="list-style-none">
                             <li>[+] ESP</li>
                             <ul className="list-style-none">
-                                <li>{product.features.ESP}</li>
+                                {product.features.ESP.map((espFeature => (
+                                    <li key={product.id}>{espFeature}</li>
+                                )))}
                             </ul>
                         </ul>
                     </Col>
@@ -36,59 +38,22 @@ const ProductsAccordion= ({products }) => {
                         <ul className="list-style-none">
                             <li>[+] Misc</li>
                             <ul className="list-style-none">
-                                <li>{product.features.Misc}</li>
+                                {product.features.Misc.map((miscFeature => (
+                                    <li key={product.id}>{miscFeature}</li>
+                                )))}
                             </ul>
                         </ul>
                     </Col>
                 </Row>
 
-                <h5>Detections</h5>
-                <ul  className="list-style-none">
-                    <li>{product.detectionHistory}</li>
+                <h5 className="text-info">Detections</h5>
+                <ul className="list-style-none">
+                {product.detectionHistory.map((dtcHistory => (
+                    <li key={product.id}>{dtcHistory}</li>
+                    )))}
                 </ul>
             </Accordion.Body>
         </Accordion.Item>
-        {/* <Accordion.Item eventKey="1">
-            <Accordion.Header>Product Name #2</Accordion.Header>
-            <Accordion.Body>
-            <Row>
-                    <Col>
-                        <ul>
-                            <li>[+] Aimbot</li>
-                            <ul>
-                                <li>Feature list..</li>
-                                <li>Feature list..</li>
-                                <li>Feature list..</li>
-                            </ul>
-                        </ul>
-                    </Col>
-                    <Col>
-                        <ul>
-                            <li>[+] Wallhacks</li>
-                            <ul>
-                                <li>Feature list...</li>
-                                <li>Feature list...</li>
-                                <li>Feature list...</li>
-                            </ul>
-                        </ul>
-                    </Col>
-                    <Col>
-                        <ul>
-                            <li>[+] Misc</li>
-                            <ul>
-                                <li>Feature list...</li>
-                            </ul>
-                        </ul>
-                    </Col>
-                </Row>                
-            </Accordion.Body>
-        </Accordion.Item>
-        <Accordion.Item eventKey="2">
-            <Accordion.Header>Product Name #3 </Accordion.Header>
-            <Accordion.Body>
-            
-            </Accordion.Body>
-        </Accordion.Item> */}
         </Accordion>
     ))}
 </div>
