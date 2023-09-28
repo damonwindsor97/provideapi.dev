@@ -7,7 +7,7 @@ const ProductsAccordion= ({products }) => {
     <div className='m-4 mt-5'>
     {products.map((product) => (
         <Accordion defaultActiveKey={['0']} alwaysOpen data-bs-theme="dark">
-        <Accordion.Item eventKey={`0` + 1}>
+        <Accordion.Item eventKey={'0' + 1}>
             <Accordion.Header>{product.productName}</Accordion.Header>
             <Accordion.Body>
                 Developer: {product.developer}
