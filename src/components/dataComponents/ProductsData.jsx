@@ -9,7 +9,6 @@ function ProductsData() {
     const [isLoading, setLoading] = useState(true);
 
     useEffect(() => {
-        setTimeout(() => {
             const headers = {}
             fetch('https://provide-api-ss5x.onrender.com/api/products', headers)
             .then(res => {
@@ -19,7 +18,6 @@ function ProductsData() {
                 setProducts(data)
                 setLoading(false)
             });
-        });
     }, []);
 
 
