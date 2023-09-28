@@ -1,4 +1,5 @@
-import {Container, Col, Row, Accordion } from 'react-bootstrap';
+import {Container, } from 'react-bootstrap';
+import ProductsAccordion from './ProductsAccordion';
 
 import {useEffect, useState} from 'react';
 
@@ -6,13 +7,14 @@ function ProductsData() {
     const [products, setProducts] = useState(null);
 
     useEffect(() => {
-        const headers = {'cross-origin-resource-policy': 'disabled'}
+        const headers = {}
         fetch('https://provide-api-ss5x.onrender.com/api/products', headers)
         .then(res => {
             return res.json();
         })
         .then(data => {
             console.log(data)
+            setProducts(data)
         })
     }, []);
 
@@ -36,87 +38,8 @@ function ProductsData() {
             <p className='m-1'>We are <span className='text-danger'>not sponsored or endorsed</span> by any of the providers that develop these products.</p>
         </div>
 
+        {<ProductsAccordion products={products}/>}
 
-        <div className='m-4 mt-5'>
-            <Accordion defaultActiveKey={['0']} alwaysOpen data-bs-theme="dark">
-            <Accordion.Item eventKey="0">
-                <Accordion.Header>Product Name #1</Accordion.Header>
-                <Accordion.Body>
-                    <Row>
-                        <Col>
-                            <ul>
-                                <li>[+] Aimbot</li>
-                                <ul>
-                                    <li>Feature list..</li>
-                                    <li>Feature list..</li>
-                                    <li>Feature list..</li>
-                                </ul>
-                            </ul>
-                        </Col>
-                        <Col>
-                            <ul>
-                                <li>[+] Wallhacks</li>
-                                <ul>
-                                    <li>Feature list...</li>
-                                    <li>Feature list...</li>
-                                    <li>Feature list...</li>
-                                </ul>
-                            </ul>
-                        </Col>
-                        <Col>
-                            <ul>
-                                <li>[+] Misc</li>
-                                <ul>
-                                    <li>Feature list...</li>
-                                </ul>
-                            </ul>
-                        </Col>
-                    </Row>
-                </Accordion.Body>
-            </Accordion.Item>
-            <Accordion.Item eventKey="1">
-                <Accordion.Header>Product Name #2</Accordion.Header>
-                <Accordion.Body>
-                <Row>
-                        <Col>
-                            <ul>
-                                <li>[+] Aimbot</li>
-                                <ul>
-                                    <li>Feature list..</li>
-                                    <li>Feature list..</li>
-                                    <li>Feature list..</li>
-                                </ul>
-                            </ul>
-                        </Col>
-                        <Col>
-                            <ul>
-                                <li>[+] Wallhacks</li>
-                                <ul>
-                                    <li>Feature list...</li>
-                                    <li>Feature list...</li>
-                                    <li>Feature list...</li>
-                                </ul>
-                            </ul>
-                        </Col>
-                        <Col>
-                            <ul>
-                                <li>[+] Misc</li>
-                                <ul>
-                                    <li>Feature list...</li>
-                                </ul>
-                            </ul>
-                        </Col>
-                    </Row>                
-                </Accordion.Body>
-            </Accordion.Item>
-            <Accordion.Item eventKey="2">
-                <Accordion.Header>Product Name #3 </Accordion.Header>
-                <Accordion.Body>
-                
-                </Accordion.Body>
-            </Accordion.Item>
-            </Accordion>
-        </div>
     </Container>
   )
 }
