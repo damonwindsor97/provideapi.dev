@@ -2,13 +2,6 @@ import { Col, Row, Accordion } from "react-bootstrap";
 
 const ProductsAccordion= ({products }) => {
 
-    let updateStatus;
-    if (products.isUpdated === true){
-        updateStatus = <p className="text-success-emphasis">{String(products.isUpdated)}</p>
-    } else {
-        updateStatus = <p className="text-danger">{String(products.isUpdated)}</p>
-    }
-
     return (
     <div className='m-4 mt-5'>
     {products.map((product, index) => (
@@ -61,16 +54,16 @@ const ProductsAccordion= ({products }) => {
 
                 <Row className="m-4">
                     <Col>
-                        <h3>Is Detected:</h3>
-                        <p>{product.isDetected}</p>
+                        <h3 className="text-danger-emphasis">Is Detected:</h3>
+                        <p>{String(product.isDetected)}</p>
                     </Col>
                     <Col>
-                        <h3>Is Updating:</h3>
+                        <h3 className="text-warning-emphasis">Is Updating:</h3>
                         <p>{String(product.isUpdating)}</p>
                     </Col>
                     <Col>
-                        <h3>Is Updated:</h3>
-                        <p>{updateStatus}</p>
+                        <h3 className="text-success-emphasis">Is Updated:</h3>
+                        <p>{String(product.isUpdated)}</p>
                     </Col>
                 </Row>
             </Accordion.Body>
