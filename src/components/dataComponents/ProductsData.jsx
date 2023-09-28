@@ -38,7 +38,7 @@ function ProductsData() {
             <p className='m-1'>We are <span className='text-danger'>not sponsored or endorsed</span> by any of the providers that develop these products.</p>
         </div>
 
-        {<ProductsAccordion products={products}/>}
+        {products && <ProductsAccordion products={products}/>}
 
     </Container>
   )
