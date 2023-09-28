@@ -59,7 +59,7 @@ const ProductsAccordion= ({products }) => {
                     )))}
                 </ul>
 
-                <Row>
+                <Row className="m-4">
                     <Col>
                         <h3>Is Detected:</h3>
                         <p>{product.isDetected}</p>
