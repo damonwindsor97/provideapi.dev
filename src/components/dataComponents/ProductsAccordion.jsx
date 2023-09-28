@@ -45,8 +45,8 @@ const ProductsAccordion= ({products }) => {
                     </Col>
                 </Row>
 
-                <h5 className="text-info">Detections</h5>
-                <ul className="list-style-none">
+                <h5 className="text-info mt-2">Detections</h5>
+                <ul className="list-style-none mb-2">
                 {product.detectionHistory.map((dtcHistory => (
                     <li key={product.id}>{dtcHistory}</li>
                     )))}
