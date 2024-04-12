@@ -1,13 +1,14 @@
 <p align="center">
     An API to help users gather information on the best, worst or most appropriate cheat for the game they play.
     <br />
-    <a><strong>Explore the docs » *coming soon*...</strong></a>
+    <a><strong>Explore the docs » *NEVER COMING SRY*...</strong></a>
 
 </p>
   
   <div align="center">
     <h2>About The Project<h2/>
   </div>
+        <strong>NO LONGER BEING DEVELOPED, NEEDED A RECODE DUE TO MANY LIMITATIONS</strong>
 This API has mainly been built as a passion project for myself and my friends to use; it holds data on Game Enhancer Providers and their correlating Products. Giving a good description and/or chuck of info so they know who to choose next!
       <br />
        <br />
